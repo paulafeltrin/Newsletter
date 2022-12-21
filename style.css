@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&family=Work+Sans:wght@400;500;700&display=swap');
+
+:root {
+  --body-bg-color: #121214;
+  --text-color: #E1E1E6;
+  --title-color: #04D361;
+  --form-color: #A8A8A8;
+  --bg-button-color: #8257e5;
+  --text: 'League Spartan', sans-serif;
+  --text-title: 'Work Sans', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    background: var(--body-bg-color);
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        "logo img"
+        "text img"
+        "form img";
+    grid-template-rows: 20vh 40vh 40vh;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    height: 100vh;
+    padding-left: 2vw;
+}
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo{
+    grid-area: logo;
+    margin-bottom: 18vh;
+    width: 31vw;
+}
+h1{
+    grid-area: text;
+    color: var(--title-color);
+    width: 50vw;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: .18rem;
+    font-family: var(--text-title);
+}
+.p-1{
+    grid-area: text;
+    color: var(--text-color);
+    font-family: var(--text);
+    font-weight: 700;
+    margin: 1vh 0;
+    letter-spacing: .1em;
+    font-size: 1rem;
+}
+.p-2{
+    grid-area: text;
+    color: var(--text-color);
+    font-family: var(--text);
+    font-weight: 400;
+    line-height: 5vh;
+    letter-spacing: .15em;
+    margin: 3vh 0 1vh 0;
+}
+form{
+    grid-area: from;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+label{
+    color: var(--form-color);
+    font-family: var(--text);
+    font-weight: 700;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    margin: 3vh 0 2vh 0;
+}
+input{
+    width: 900px;
+    height: 8vh;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: -20vw;
+    background: var(--text-color);
+    caret-color: var(--title-color);
+    padding-left: 2vw;
+    color: var(--body-bg-color);
+    border-left: 8px solid var(--title-color);
+    box-shadow: 14px 9px 37px -7px var(--text-color);
+}
+
+form > div > img{
+    background: var(--bg-button-color);
+    color: white;
+    padding: 2.4vh 2.2vw;
+    position: absolute;
+    top: 7vh;
+    right: -12vw;
+    z-index: 2;
+    box-shadow: 14px 9px 37px -7px var(--text-color);
+}
+button{
+    color: var(--bg-button-color);
+    font-family: var(--text);
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    height: 4vh;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: 10vh;
+    border: none;
+}
+button:hover{
+    outline: 1px solid var(--bg-button-color);
+    opacity: .5;
+    cursor: pointer;
+    color: var(--text-color);
+}
+figure{
+    position: relative;
+    z-index: 1;
+    grid-area: img;
+    width: 40vw;
+    height: 100vh;
+    background-image: url('assets/read_news.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom 20% left 80%;
+}
