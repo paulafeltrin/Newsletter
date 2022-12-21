@@ -17,14 +17,17 @@
         <p class="p-2">noticias sobre o universo Rocketseat, e tudo o que precisa para começar o dia melhor...
             perfeito para se preparar para codar ☕</p>
             
-        <form id="form" action="">
+        <form action="" id="form" class="form">
+            <div class="msg"></div>
             <label for="email">Insira seu e-mail:</label>
-            <div>
+            <div class="formControl">
                 <input id="email" type="email" placeholder="seu_email@seudominio.com" required>
+                <span class="error"></span>
                 <img src="assets/send.svg" alt="Enviar">
+                <small>Error Message</small>
             </div>
             
-            <button id="aviso">
+            <button type="submit">
                 Deixe-me ler primeiro
                 <img src="assets/arrow-right.svg" alt="Seta para a direita">
             </button>
